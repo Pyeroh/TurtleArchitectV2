@@ -39,8 +39,8 @@ tFile.log = tFile.folder.."/log" --error log, errors are only logged while runni
 
 tPaste = {
 --pastebin codes and functions
-  program = "VTZ6CqWY", --program installer
-  cTurtle = "JRPN0P8x", --Turtle API, downloaded automatically if needed
+  program = "KPR84sQC", --program installer
+  cTurtle = "Pyeroh/81e88be13c819d612530f59b7d173c20/raw/cTurtle.lua", --Turtle API, downloaded automatically if needed
   key = "0ec2eb25b6166c0c27a394ae118ad829", -- pastbin dev key, cc default
 }
 
@@ -178,7 +178,7 @@ if turtle then
     error("Turtle Architect is incompatible with regular turtles!",0)
   end
   if not fs.exists(tFile.cTurtle) then
-    assert(http.paste.get(tPaste.cTurtle,tFile.cTurtle),"Error: Failed to download cTurtle API")
+    assert(http.gist.get(tPaste.cTurtle,tFile.cTurtle),"Error: Failed to download cTurtle API")
   end
   os.loadAPI(tFile.cTurtle)
   cTurtle.tSettings.renderMove = false
@@ -205,7 +205,7 @@ elseif term.isColor() then
       end
       if glasses.screenMode:match"Log" then
 			  glasses.log.open(glasses.log.sX,glasses.log.sY,glasses.log.eX,glasses.log.eY)
-        glasses.log.write("Welcome to Turtle Architect V2",5)
+        glasses.log.write("Welcome to Turtle Architect V2.1",5)
       end
     end
     if glasses.bridge and modem then

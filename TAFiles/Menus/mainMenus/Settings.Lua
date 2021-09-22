@@ -369,7 +369,7 @@ BGL mode: ]]..(tMode.backgroundLayer and "ON" or "OFF"),
       window.text"Tells the story of how awesome i am"
     end,
     func = function()
-      window.text([[Turtle Architect 2.0.
+      window.text([[Turtle Architect 2.1.
 This software lets you draw your Minecraft constructions on your computer, and have your turtle build it wherever you desire. Files may easily be saved or even uploaded to Pastebin, for later use.
 Developed by CometWolf.
 
